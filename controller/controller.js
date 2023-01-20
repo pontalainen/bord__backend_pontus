@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
 //* This is basically for CORS, setting the rules for access to the API
-app.use(function (req, res) {
+app.use(function (req, res, next) {
   // res.header("Access-Control-Allow-Origin", "http://127.0.0.1:8080");
   res.header("Access-Control-Allow-Origin", "https://tcstenungsund.github.io");
   res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
@@ -18,6 +18,7 @@ app.use(function (req, res) {
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
   );
+  next();
 });
 
 //* This is the router in use
