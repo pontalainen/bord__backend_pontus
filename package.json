@@ -2,11 +2,11 @@
   "name": "api",
   "type": "module",
   "scripts": {
-    "controller": "node controller/controller.js",
+    "start": "node controller/controller.js",
     "dev": "nodemon controller/controller.js",
     "del": "cd db && del themes.db",
     "curl": "curl https://media.githubusercontent.com/media/pontalainen/bord__backend_pontus/main/db/themes.db --output db/themes.db",
-    "start": "concurrently \"npm run del\" \"npm run curl\" \"npm run controller\""
+    "all": "concurrently \"npm run del\" \"npm run curl\" \"npm run controller\""
   },
   "dependencies": {
     "axios": "^1.2.1",
