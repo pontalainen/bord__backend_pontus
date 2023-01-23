@@ -2,7 +2,8 @@
   "name": "api",
   "type": "module",
   "scripts": {
-    "start": "npm-run-all --sequential db:*",
+    "start": "node controller/controller.js",
+    "starttt": "npm-run-all --sequential db:*",
     "dev": "nodemon controller/controller.js",
     "db:del": "cd db && del themes.db && del .gitattributes",
     "db:curl": "curl https://media.githubusercontent.com/media/pontalainen/bord__backend_pontus/main/db/themes.db --output db/themes.db",
