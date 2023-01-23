@@ -2,7 +2,7 @@
   "name": "api",
   "type": "module",
   "scripts": {
-    "start": "node controller/controller.js",
+    "start": "concurrently \"node controller/controller.js\"",
     "dev": "nodemon controller/controller.js",
     "del": "cd db && del themes.db",
     "curl": "curl https://media.githubusercontent.com/media/pontalainen/bord__backend_pontus/main/db/themes.db --output db/themes.db",
